@@ -4,7 +4,10 @@
   "description": "Curso de Cypress",
   "main": "caso_de_prueba_1.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "limpiar-reporte": "rimraf ./allure-report && rimraf ./allure-results",
+    "ejecutar-pruebas": "cypress run --headed --env allure=true",
+    "test": "npm run limpiar-reporte && npm run ejecutar-pruebas && npm run generar-reporte",
+    "generar-reporte": "allure generate allure-results --clean -o allure-report && allure open allure-report"
   },
   "repository": {
     "type": "git",
@@ -18,6 +21,11 @@
   },
   "homepage": "https://github.com/DaMoNBVR/CypressCourse#readme",
   "devDependencies": {
+    "@shelex/cypress-allure-plugin": "^2.41.1",
     "cypress": "^14.3.3"
+  },
+  "dependencies": {
+    "allure-commandline": "^2.34.0",
+    "rimraf": "^6.0.1"
   }
 }
