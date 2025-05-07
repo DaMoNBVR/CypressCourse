@@ -1,0 +1,23 @@
+{
+  "name": "cypresscourse",
+  "version": "1.0.0",
+  "description": "Curso de Cypress",
+  "main": "caso_de_prueba_1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DaMoNBVR/CypressCourse.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DaMoNBVR/CypressCourse/issues"
+  },
+  "homepage": "https://github.com/DaMoNBVR/CypressCourse#readme",
+  "devDependencies": {
+    "cypress": "^14.3.3"
+  }
+}
