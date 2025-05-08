@@ -1,6 +1,6 @@
 import { LoginElements } from "./login.elements";
 
-export class LoginMethods {
+ export class LoginMethods {
 
     static insertUsername(username) {
 
@@ -22,10 +22,10 @@ export class LoginMethods {
 
     static login(username, password) {
             
-            this.insertUsername(username);
-            this.insertPassword(password);
-            this.clickLoginButton();
+        this.insertUsername(username);
+        this.insertPassword(password);
+        this.clickLoginButton();
 
-        }
+    }
 
 }
