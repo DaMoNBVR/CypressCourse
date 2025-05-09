@@ -1,3 +1,4 @@
+import { CartMethods } from './Pages/Cart/cart.methods';
 import { HomeMethods } from './Pages/Home/home.methods';
 import { LoginMethods } from './Pages/Login/login.methods';
 
@@ -8,11 +9,8 @@ describe('template spec', () => {
       // const usuario = 'random01'
       // const contrasena = 'random1'
         cy.visit('https://www.demoblaze.com/index.html')
-        //maximizar la ventana
-        cy.viewport(1920, 1080)
-        //esperar 5 segundos
-        cy.wait(2000)
-        HomeMethods.clickProduct('Iphone 6 32gb')
-        cy.wait(5000)
+        cy.wait(30000)
+        CartMethods.clickDelete('Samsung galaxy s6')
+        cy.wait(10000)
     })
 })
