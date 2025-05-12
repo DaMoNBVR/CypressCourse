@@ -30,5 +30,11 @@ export class CommonMethods {
     static clickSignUpButton() {
         CommonElements.topNav.signUp.click()
     }
+
+    static verifyAlertMessage(expectedMessage) {
+        cy.on("window:alert", (str) => {
+            expect(str).to.equal(expectedMessage);
+        });
+    }
     
 }

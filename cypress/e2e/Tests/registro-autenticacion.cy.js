@@ -1,0 +1,34 @@
+import { CommonData } from '../Pages/Common/common.data';
+import { CommonMethods } from '../Pages/Common/common.methods';
+import { Logger } from '../Util/Logger';
+import { SignupMethods } from '../Pages/Signup/signup.methods';
+
+describe ( CommonData.testSuites.registroYAutenticacion , () => {
+    it('Registro de usuario válido', () => {
+
+        //Paso 1: Navegar a la página de inicio
+
+        Logger.StepNumber(1);
+        Logger.Step('Navegar a la página de inicio');
+        CommonMethods.NavigateHomePage();
+
+        //Paso 2: Hacer clic en el botón de "Sign up" en la barra de navegación
+
+        Logger.StepNumber(2);
+        Logger.Step('Hacer clic en el botón de "Sign up" en la barra de navegación');
+        CommonMethods.clickSignUpButton();
+
+        //Paso 3: Ingresar un nombre de usuario y una contraseña válidos y clickear el botón de "Sign up"
+
+        Logger.StepNumber(3);
+        Logger.Step('Ingresar un nombre de usuario y una contraseña válidos');
+        SignupMethods.signup("hsdfgsdfgsfdgsfdg", "asdfghsfgdhfgh");
+
+        //Paso 4: Verificar que el registro fue exitoso y que se muestra un mensaje de éxito
+
+        Logger.StepNumber(4);
+        Logger.Verification('Verificar que el registro fue exitoso y que se redirige a la página de inicio de sesión');
+        SignupMethods.verifySignupSuccess();
+
+    });
+});

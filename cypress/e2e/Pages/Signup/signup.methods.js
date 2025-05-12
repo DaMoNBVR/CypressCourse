@@ -1,3 +1,4 @@
+import { CommonMethods } from "../Common/common.methods";
 import { SignupElements } from "./signup.elements";
 
  export class SignupMethods {
@@ -27,5 +28,10 @@ import { SignupElements } from "./signup.elements";
         this.clickSignupButton();
 
     }
+
+    static verifySignupSuccess() {
+
+        CommonMethods.verifyAlertMessage("Sign up successful."); // Verify the alert message for successful registration
+    } 
 
 }
