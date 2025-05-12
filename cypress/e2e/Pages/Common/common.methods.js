@@ -4,6 +4,7 @@ import { CommonElements } from "./common.elements";
 export class CommonMethods {
     
     static NavigateHomePage() {
+        cy.clearCookies()
         cy.visit(CommonData.url)
     }
 

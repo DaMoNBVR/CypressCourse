@@ -5,19 +5,19 @@ import { SignupElements } from "./signup.elements";
 
     static insertUsername(username) {
 
-        SignupElements.textBoxes.username().clear().type(username, { force: true }); // Clear the input before typing
+        SignupElements.textBoxes.username.clear().type(username, { force: true }); // Clear the input before typing
 
     }
 
     static insertPassword(password) {
 
-        SignupElements.textBoxes.password().clear().type(password, { force: true }); // Clear the input before typing
+        SignupElements.textBoxes.password.clear().type(password, { force: true }); // Clear the input before typing
 
     }
 
     static clickSignupButton() { 
 
-        SignupElements.buttons.signup().click({ force: true }); // Force click to bypass any potential issues with visibility
+        SignupElements.buttons.signup.click({ force: true }); // Force click to bypass any potential issues with visibility
 
     }
 
@@ -32,6 +32,6 @@ import { SignupElements } from "./signup.elements";
     static verifySignupSuccess() {
 
         CommonMethods.verifyAlertMessage("Sign up successful."); // Verify the alert message for successful registration
-    } 
+    }
 
 }

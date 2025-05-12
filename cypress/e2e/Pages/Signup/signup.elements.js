@@ -2,12 +2,12 @@ export class SignupElements {
     static get textBoxes() {
 
         return{
-            username(){
+            get username(){
 
                 return cy.get('input#sign-username')
 
             },
-            password(){
+            get password(){
 
                 return cy.get('input#sign-password')
 
@@ -18,12 +18,12 @@ export class SignupElements {
     static get buttons() {
 
         return{
-            signup(){
+            get signup(){
 
                 return cy.contains('button', 'Sign up')
 
             },
-            close(){
+            get close(){
 
                 return cy.contains('button', 'Close').eq(1)
 
