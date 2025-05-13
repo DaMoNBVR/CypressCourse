@@ -2,6 +2,7 @@ import { CommonData } from "../Pages/Common/common.data";
 import { CommonMethods } from "../Pages/Common/common.methods";
 import { HomeMethods } from "../Pages/Home/home.methods";
 import { LoginMethods } from "../Pages/Login/login.methods";
+import { ProductDetailsMethods } from "../Pages/ProductDetails/product-details.methods";
 import { Logger } from "../Util/Logger";
 
 describe(CommonData.testSuites.catalogoYCompra, () => {
@@ -61,6 +62,16 @@ describe(CommonData.testSuites.catalogoYCompra, () => {
         HomeMethods.clickProduct('Apple monitor 24');
 
         Logger.Subverification('Verificar que se muestra la página del producto "Apple monitor 24"');
+        ProductDetailsMethods.verifyProductDetailsPage();
+
+        Logger.StepNumber(5);
+        Logger.Step('Agregar el producto al carrito');
+        Logger.Substeps('Clickear el botón "Add to cart"');
+        ProductDetailsMethods.clickAddToCart();
+
+        Logger.StepNumber(6);
+        Logger.Step('Verificar que el producto fue agregado al carrito');
+        ProductDetailsMethods.verifyProductAddedMessage();
         
 
     })
