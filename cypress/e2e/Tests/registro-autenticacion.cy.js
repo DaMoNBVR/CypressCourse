@@ -3,6 +3,9 @@ import { CommonMethods } from '../Pages/Common/common.methods';
 import { Logger } from '../Util/Logger';
 import { SignupMethods } from '../Pages/Signup/signup.methods';
 
+const user = CommonMethods.randomString(10);
+const password = CommonMethods.randomString(7);
+
 describe ( CommonData.testSuites.registroYAutenticacion , () => {
     it('Registro de usuario válido', () => {
 
@@ -22,9 +25,15 @@ describe ( CommonData.testSuites.registroYAutenticacion , () => {
 
         Logger.StepNumber(3);
         Logger.Step('Ingresar un nombre de usuario y una contraseña válidos');
-        SignupMethods.signup("hsdfgsdfgsfdgsfdg", "asdfghsfgdhfgh");
+        SignupMethods.insertUsername(user);
+        SignupMethods.insertPassword(password);
 
-        //Paso 4: Verificar que el registro fue exitoso y que se muestra un mensaje de éxito
+        //Paso 4: Hacer clic en el botón de "Sign up" para completar el registro
+        Logger.StepNumber(4);
+        Logger.Step('Hacer clic en el botón de "Sign up" para completar el registro');
+        SignupMethods.clickSignupButton();
+
+        //Paso 5: Verificar que el registro fue exitoso y que se muestra un mensaje de éxito
 
         Logger.StepNumber(4);
         Logger.Verification('Verificar que el registro fue exitoso y que se redirige a la página de inicio de sesión');

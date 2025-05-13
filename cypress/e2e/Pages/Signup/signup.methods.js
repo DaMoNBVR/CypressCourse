@@ -5,13 +5,13 @@ import { SignupElements } from "./signup.elements";
 
     static insertUsername(username) {
 
-        SignupElements.textBoxes.username.clear().type(username, { force: true }); // Clear the input before typing
+        SignupElements.textBoxes.username.clear().invoke("val", username, { force: true }); // Clear the input before typing
 
     }
 
     static insertPassword(password) {
 
-        SignupElements.textBoxes.password.clear().type(password, { force: true }); // Clear the input before typing
+        SignupElements.textBoxes.password.clear().invoke("val", password, { force: true }); // Clear the input before typing
 
     }
 
