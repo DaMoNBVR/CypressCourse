@@ -26,4 +26,10 @@ import { HomeElements } from "./home.elements";
 
     }
 
+    static verifyProductPage(productName) {
+
+        HomeElements.product(productName).should('be.visible'); // Verify that the product page is visible
+
+    }
+
 }
