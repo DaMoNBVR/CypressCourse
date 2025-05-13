@@ -37,7 +37,7 @@ describe ( CommonData.testSuites.registro , () => {
 
         //Paso 5: Verificar que el registro fue exitoso y que se muestra un mensaje de éxito
 
-        Logger.StepNumber(4);
+        Logger.StepNumber(5);
         Logger.Verification('Verificar que el registro fue exitoso y que se redirige a la página de inicio de sesión');
         SignupMethods.verifySignupSuccess();
 
@@ -72,7 +72,7 @@ describe ( CommonData.testSuites.registro , () => {
 
         //Paso 5: Verificar que el registro fue exitoso y que se muestra un mensaje de éxito
 
-        Logger.StepNumber(4);
+        Logger.StepNumber(5);
         Logger.Verification('Verificar que el registro fue fallido y que muestra un mensaje de error');
         SignupMethods.verifySignupFailed();
 

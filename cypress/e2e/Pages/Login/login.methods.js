@@ -1,4 +1,5 @@
 import { Logger } from "../../Util/Logger";
+import { CommonMethods } from "../Common/common.methods";
 import { LoginElements } from "./login.elements";
 
  export class LoginMethods {
@@ -22,12 +23,25 @@ import { LoginElements } from "./login.elements";
     }
 
     static login(username, password) {
+
         Logger.Substeps('Insert username')    
         this.insertUsername(username);
         Logger.Substeps('Insert password')
         this.insertPassword(password);
         Logger.Substeps('Click "Login" button')
         this.clickLoginButton();
+
+    }
+
+    static verifySignedInUser(username) {
+
+        LoginElements.signedInUser.should('have.text', `Welcome ${username}`);
+
+    }
+
+    static verifiyWrongCredentials() {
+        
+        CommonMethods.verifyAlertMessage("Wrong password.")
 
     }
 

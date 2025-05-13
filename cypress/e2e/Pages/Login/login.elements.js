@@ -31,4 +31,11 @@ export class LoginElements {
         }
 
     }
+
+    static get signedInUser() {
+
+        return cy.get('a#nameofuser');
+        
+    }
+
 }
