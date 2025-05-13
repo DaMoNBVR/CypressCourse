@@ -34,4 +34,9 @@ import { SignupElements } from "./signup.elements";
         CommonMethods.verifyAlertMessage("Sign up successful."); // Verify the alert message for successful registration
     }
 
+    static verifySignupFailed() {
+
+        CommonMethods.verifyAlertMessage("This user already exist."); // Verify the alert message for failed registration
+    }
+
 }

@@ -5,8 +5,16 @@ export class CommonData {
 
     static get testSuites() {
         return {
-            registroYAutenticacion: "Registro y Autenticación",
+            registro: "Registro",
+            autenticacion: "Autenticación",
             catalogoYCompra: "Catálogo y Compras",
         }
     }
-}   
+
+    static get testData() {
+        return {
+            existingUser: "random01",
+            existingPassword: "random01"
+        }
+    }
+}
