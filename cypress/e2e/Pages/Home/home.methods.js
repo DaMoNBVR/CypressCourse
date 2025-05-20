@@ -32,4 +32,10 @@ import { HomeElements } from "./home.elements";
 
     }
 
+    static verifyHomePageisShown() {
+        
+        cy.url().should('include', 'index.html'); // Verify that the URL includes 'demoblaze.com/index.html'
+
+    }
+
 }

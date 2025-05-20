@@ -34,4 +34,15 @@ export class PlaceOrderMethods {
         PlaceOrderElements.buttons.close.click()
     }
 
+    static insertAllFields (data) {
+        
+        this.insertName(data.name)
+        this.insertCountry(data.country)
+        this.insertCity(data.city)
+        this.insertCreditCard(data.creditCard)
+        this.insertMonth(data.month)
+        this.insertYear(data.year)
+
+    }
+
 }

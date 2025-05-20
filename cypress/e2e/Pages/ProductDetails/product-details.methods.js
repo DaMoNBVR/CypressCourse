@@ -17,7 +17,7 @@ export class ProductDetailsMethods {
 
     static verifyProductAddedMessage() {
 
-        CommonMethods.verifyAlertMessage('Product added');
+        CommonMethods.verifyAlertMessage('Product added.');
         
     }
 
