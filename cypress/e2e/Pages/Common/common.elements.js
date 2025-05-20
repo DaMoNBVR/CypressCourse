@@ -28,6 +28,10 @@ export class CommonElements {
             return cy.get('a[data-target="#signInModal"]');
             },
 
+            get logout() {
+            return cy.get('a#logout2');
+            }
+
         }
     }
 }

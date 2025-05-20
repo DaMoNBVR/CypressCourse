@@ -41,6 +41,10 @@ describe(CommonData.testSuites.autenticacion, () => {
                 Logger.Verification('Verificar que el inicio de sesión fue exitoso y que se redirige a la página de inicio de sesión');
                 LoginMethods.verifySignedInUser(user);
 
+                //Paso 6: Hacer clic en el botón de "Logout" para cerrar sesión
+                Logger.postCondition('Hacer clic en el botón de "Logout" para cerrar sesión');
+                CommonMethods.clickLogoutButton();
+
     });
 
     it('Autenticación de usuario inválido', () => {

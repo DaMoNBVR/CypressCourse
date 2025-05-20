@@ -28,7 +28,18 @@ export class CommonMethods {
         CommonElements.topNav.login.click()
     }
 
+    static clickLogoutButton() {
+        
+        cy.get('body').then(($body) => {
+            
+            if ($body.find("a#logout2").length > 0) {
+                CommonElements.topNav.logout.click()
+            }
+        })
+    }
+
     static clickSignUpButton() {
+        
         CommonElements.topNav.signUp.click()
     }
 
