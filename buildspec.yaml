@@ -12,3 +12,7 @@ phases:
     commands:
     - echo "Running Cypress tests"
     - npm run cy:parallel || echo "Cypress tests failed"
+  post_build:
+    commands:
+    - aws s3 sync allure-report s3://reporte-de-pruebas-bayron/
+    - aws s3 cp --recursive --acl public-read s3://reporte-de-pruebas-bayron/ s3://reporte-de-pruebas-bayron/ --metadata-directive REPLACE
