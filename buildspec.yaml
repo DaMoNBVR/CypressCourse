@@ -1,8 +1,32 @@
 version: 0.2
+
 phases:
   install:
     runtime-versions:
-      nodejs: latest
+      nodejs: 20
+    commands:
+      # Instalar librerías del sistema requeridas por Cypress
+      - yum -y update
+      - yum -y install \
+          gtk3-devel \
+          libXtst \
+          xcb-util-image \
+          xcb-util-keysyms \
+          xcb-util-renderutil \
+          xcb-util-wm \
+          atk \
+          at-spi2-atk \
+          at-spi2-core \
+          cups-libs \
+          libdrm \
+          alsa-lib \
+          libXcomposite \
+          libXcursor \
+          libXdamage \
+          libXrandr \
+          libXScrnSaver \
+          libxshmfence \
+          xorg-x11-server-Xvfb
   pre_build:
     commands:
       - npm install
